@@ -8,6 +8,9 @@ In the command line, type:
 # To start the virtual machine, whose /vagrant directory will be syncronized with your development directory
 vagrant up
 
+# To stop the virtual machine
+vagrant halt
+
 # To connect, via ssh, to the virtual machine located in your computer
 vagrant ssh
 
@@ -16,6 +19,12 @@ exit
 
 # To create the python environment 
 python -m venv ~/env
+
+# To make the migrations file (run this whenever you create a model, to make django create the table associated)
+python manage.py makemigrations
+
+# To apply the migrations
+python manage.py migrate
 
 # To activate, and enter, the python local environment
 source ~/env/bin/activate
