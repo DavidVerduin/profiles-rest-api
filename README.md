@@ -38,3 +38,7 @@ pip install -r requirements.txt
 # To run the django development server
 
 python manage.py runserver 0.0.0.0:8000
+
+# To deploy in the aws server
+
+chmod +x deploy/*.sh
