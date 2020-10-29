@@ -39,6 +39,14 @@ pip install -r requirements.txt
 
 python manage.py runserver 0.0.0.0:8000
 
-# To deploy in the aws server
+# To make .sh files executable
 
 chmod +x deploy/*.sh
+
+# To connect with the aws server
+
+ssh ubuntu@{public ipv4 server url}
+
+# To run the setup file in the github page
+
+curl -sL https://raw.githubusercontent.com/DavidVerduin/profiles-rest-api/main/deploy/setup.sh | sudo bash -
