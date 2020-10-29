@@ -50,3 +50,15 @@ ssh ubuntu@{public ipv4 server url}
 # To run the setup file in the github page
 
 curl -sL https://raw.githubusercontent.com/DavidVerduin/profiles-rest-api/main/deploy/setup.sh | sudo bash -
+
+# The directory, in the aws server, where the app is located
+
+cd /usr/local/apps/profiles-rest-api/
+
+# Update the aws server with the current code in the repository
+
+sudo sh ./deploy/update.sh
+
+# Create a super user
+
+sudo env/bin/python manage.py createsuperuser
